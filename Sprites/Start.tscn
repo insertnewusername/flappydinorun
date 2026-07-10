@@ -37,10 +37,10 @@ script = ExtResource("2_s0x3u")
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=1453558416]
 layout_mode = 0
-offset_left = 68.0
-offset_top = 156.0
-offset_right = 349.0
-offset_bottom = 652.0
+offset_left = 538.0
+offset_top = 41.0
+offset_right = 819.0
+offset_bottom = 537.0
 
 [node name="Dino game" type="TextureRect" parent="Control" unique_id=2031194470]
 layout_mode = 1
