@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://c38fit7gri3u2"]
 
+[ext_resource type="Texture2D" uid="uid://d118ptorxbnbm" path="res://Assets/flappybackground.jpg" id="1_x41p7"]
+[ext_resource type="PackedScene" uid="uid://dpvumjt8hun6c" path="res://Sprites/pole.tscn" id="2_vpkua"]
+
 [node name="Node2D" type="Node2D" unique_id=1830178595]
+
+[node name="Control" type="Control" parent="." unique_id=489366546]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=715724971]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.800001
+anchor_bottom = 16.25
+texture = ExtResource("1_x41p7")
+
+[node name="CharacterBody2D" parent="." unique_id=203061404 instance=ExtResource("2_vpkua")]
+position = Vector2(376, 333)
