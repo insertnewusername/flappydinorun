@@ -1,3 +1,34 @@
 [gd_scene format=3 uid="uid://6av6bxsc7uha"]
 
+[ext_resource type="PackedScene" uid="uid://dovq2vaemgma2" path="res://Sprites/dinoground.tscn" id="1_m3ra7"]
+[ext_resource type="PackedScene" uid="uid://2iq5e6yv25iu" path="res://Sprites/dino.tscn" id="2_h7c0q"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_h7c0q"]
+specular_color = Color(0.07762881, 0.07762883, 0.07762877, 1)
+
 [node name="Node2D" type="Node2D" unique_id=1035819343]
+
+[node name="Control" type="Control" parent="." unique_id=1817884945]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1158.0
+offset_bottom = 656.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1413640421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_h7c0q")
+
+[node name="Dinoground" parent="." unique_id=888496186 instance=ExtResource("1_m3ra7")]
+position = Vector2(582, 478)
+
+[node name="Dinoground2" parent="." unique_id=2051198940 instance=ExtResource("1_m3ra7")]
+position = Vector2(1769, 478)
+
+[node name="dino" parent="." unique_id=1283356452 instance=ExtResource("2_h7c0q")]
+position = Vector2(222.00006, 360)
+scale = Vector2(0.102063425, 0.102063425)

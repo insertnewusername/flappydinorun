@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dovq2vaemgma2"]
+
+[ext_resource type="Script" uid="uid://o2gvkym8000u" path="res://Scripts/dinoground.gd" id="1_c5do5"]
+[ext_resource type="Texture2D" uid="uid://dnaqpp688g2ep" path="res://Assets/dinogameassets - Copy.png" id="1_lfq4t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5do5"]
+size = Vector2(1189, 14)
+
+[node name="Node2D" type="StaticBody2D" unique_id=40636051]
+script = ExtResource("1_c5do5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1153426346]
+texture_filter = 1
+texture = ExtResource("1_lfq4t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=731844424]
+position = Vector2(1.5, 2)
+shape = SubResource("RectangleShape2D_c5do5")

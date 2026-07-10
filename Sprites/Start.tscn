@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dqtaoxgy2ntaf"]
 
+[ext_resource type="Texture2D" uid="uid://c3fxkayknquw3" path="res://Assets/geodashbg.jpg" id="1_fk8mm"]
 [ext_resource type="Texture2D" uid="uid://dw24n5eus6ao5" path="res://Assets/flappy start.png" id="1_ns740"]
 [ext_resource type="Script" uid="uid://daocqy7ob7yeu" path="res://Scripts/flappy_birdbutton.gd" id="2_s0x3u"]
 [ext_resource type="Texture2D" uid="uid://3rgqhnjd485q" path="res://Assets/dinosaur-game-logo.png" id="3_6u6kb"]
@@ -16,6 +17,20 @@ offset_left = 88.0
 offset_top = 32.0
 offset_right = 128.0
 offset_bottom = 72.0
+
+[node name="TextureRect" type="TextureButton" parent="Control" unique_id=1092804021]
+layout_mode = 0
+offset_left = 168.0
+offset_top = -30.0
+offset_right = 882.18005
+offset_bottom = 405.0564
+scale = Vector2(1.0683581, 1.4894621)
+texture_normal = ExtResource("1_fk8mm")
+texture_pressed = ExtResource("1_fk8mm")
+texture_hover = ExtResource("1_fk8mm")
+texture_disabled = ExtResource("1_fk8mm")
+texture_focused = ExtResource("1_fk8mm")
+stretch_mode = 0
 
 [node name="Flappy bird" type="TextureButton" parent="Control" unique_id=392468160]
 layout_mode = 1
@@ -38,13 +53,6 @@ texture_focused = ExtResource("1_ns740")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s0x3u")
-
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1453558416]
-layout_mode = 0
-offset_left = 538.0
-offset_top = 41.0
-offset_right = 819.0
-offset_bottom = 537.0
 
 [node name="Dino game" type="TextureButton" parent="Control" unique_id=1408261616]
 layout_mode = 1
