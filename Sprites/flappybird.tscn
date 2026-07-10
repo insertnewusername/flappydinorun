@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c38fit7gri3u2"]
 
+[ext_resource type="Script" uid="uid://chkah8nikfdpn" path="res://Scripts/flappybirdgame.gd" id="1_nyb6b"]
 [ext_resource type="Texture2D" uid="uid://d118ptorxbnbm" path="res://Assets/flappybackground.jpg" id="1_x41p7"]
 [ext_resource type="Texture2D" uid="uid://3rgqhnjd485q" path="res://Assets/dinosaur-game-logo.png" id="2_oqvsm"]
 [ext_resource type="PackedScene" uid="uid://dpvumjt8hun6c" path="res://Sprites/pole.tscn" id="2_vpkua"]
@@ -15,6 +16,7 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [node name="Node2D" type="Node2D" unique_id=1830178595]
+script = ExtResource("1_nyb6b")
 
 [node name="Control" type="Control" parent="." unique_id=489366546]
 layout_mode = 3
@@ -46,6 +48,17 @@ scale = Vector2(-3.515834, -6.0102286)
 [node name="bird" parent="." unique_id=262046440 instance=ExtResource("3_vpkua")]
 position = Vector2(87, 328.00003)
 scale = Vector2(2.65082, 2.65082)
+
+[node name="Fade_transition" parent="." unique_id=1772130151 instance=ExtResource("6_is5kj")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=130211460]
 
 [node name="Control2" type="Control" parent="." unique_id=1425473888]
 layout_mode = 3
@@ -93,12 +106,4 @@ stretch_mode = 0
 script = ExtResource("3_is5kj")
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" parent="Control2" unique_id=1772130151 instance=ExtResource("6_is5kj")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 2
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

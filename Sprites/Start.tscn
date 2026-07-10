@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://dqtaoxgy2ntaf"]
 
 [ext_resource type="Texture2D" uid="uid://c3fxkayknquw3" path="res://Assets/geodashbg.jpg" id="1_fk8mm"]
+[ext_resource type="Script" uid="uid://cs76shmx1j1ut" path="res://Scripts/start.gd" id="1_h6838"]
 [ext_resource type="Texture2D" uid="uid://dw24n5eus6ao5" path="res://Assets/flappy start.png" id="1_ns740"]
 [ext_resource type="Script" uid="uid://daocqy7ob7yeu" path="res://Scripts/flappy_birdbutton.gd" id="2_s0x3u"]
 [ext_resource type="Texture2D" uid="uid://3rgqhnjd485q" path="res://Assets/dinosaur-game-logo.png" id="3_6u6kb"]
 [ext_resource type="Script" uid="uid://cc72whnvbxx7" path="res://Scripts/dino_game.buttongd.gd" id="3_s0x3u"]
+[ext_resource type="PackedScene" uid="uid://dmjaxooee8yvu" path="res://Sprites/fadetransition.tscn" id="7_cincb"]
 
 [sub_resource type="Shortcut" id="Shortcut_6u6kb"]
 
 [node name="Node2D" type="Node2D" unique_id=1043679149]
+script = ExtResource("1_h6838")
 
 [node name="Control" type="Control" parent="." unique_id=742799958]
 layout_mode = 3
@@ -84,3 +87,8 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Dino game"
+
+[node name="Fade_transition" parent="." unique_id=1772130151 instance=ExtResource("7_cincb")]
+visible = false
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=269974262]
