@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dw24n5eus6ao5" path="res://Assets/flappy start.png" id="1_ns740"]
 [ext_resource type="Script" uid="uid://daocqy7ob7yeu" path="res://Scripts/flappy_birdbutton.gd" id="2_s0x3u"]
+[ext_resource type="Script" uid="uid://cc72whnvbxx7" path="res://Scripts/dino_game.buttongd.gd" id="3_s0x3u"]
 
 [sub_resource type="Shortcut" id="Shortcut_6u6kb"]
 
@@ -47,7 +48,8 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 3.7200003
 anchor_bottom = 3.2600002
-offset_left = 857.0
-offset_top = 181.0
-offset_right = 748.19995
-offset_bottom = 90.59999
+offset_left = 930.0
+offset_top = -3.0
+offset_right = 916.19995
+offset_bottom = 265.59998
+script = ExtResource("3_s0x3u")

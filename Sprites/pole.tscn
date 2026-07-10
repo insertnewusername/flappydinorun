@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dpvumjt8hun6c"]
 
+[ext_resource type="Script" uid="uid://cf0d2xmvmjaft" path="res://Scripts/pole.gd" id="1_c2o5c"]
 [ext_resource type="Texture2D" uid="uid://t06lk3hnuf4n" path="res://Assets/SimpleStyle1.png" id="1_k1n53"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c2o5c"]
@@ -21,6 +22,7 @@ animations = [{
 size = Vector2(31, 78)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=203061404]
+script = ExtResource("1_c2o5c")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=358896420]
 position = Vector2(3.0000038, 60)
