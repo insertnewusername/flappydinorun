@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dpvumjt8hun6c" path="res://Sprites/pole.tscn" id="2_vpkua"]
 [ext_resource type="Script" uid="uid://cm3ymx0be2do4" path="res://Scripts/homebutton.gd" id="3_is5kj"]
 [ext_resource type="PackedScene" uid="uid://b7fubmpbqiaod" path="res://Sprites/bird.tscn" id="3_vpkua"]
+[ext_resource type="PackedScene" uid="uid://dmjaxooee8yvu" path="res://Sprites/fadetransition.tscn" id="6_is5kj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpkua"]
 bg_color = Color(0.3620621, 0.68384075, 0.42607707, 1)
@@ -91,3 +92,13 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_is5kj")
 metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" parent="Control2" unique_id=1772130151 instance=ExtResource("6_is5kj")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
