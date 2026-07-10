@@ -3,7 +3,10 @@ extends CharacterBody2D
 
 
 const JUMP_VELOCITY = -400.0
+var screen_height: float
 
+func _ready() -> void:
+	screen_height = get_viewport_rect().size.y
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -13,8 +16,19 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
+		animated_sprite_2d.play("flap")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 
 	move_and_slide()
+	
+	if global_position.y > screen_height or global_position.y < 0:
+		die()
+	
+func die():
+	print("ded") 
+	call_deferred("restart")	
+	
+func restart():
+	get_tree().reload_current_scene()

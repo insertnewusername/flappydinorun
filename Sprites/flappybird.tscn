@@ -9,14 +9,16 @@
 [node name="Control" type="Control" parent="." unique_id=489366546]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1159.0
+offset_bottom = 649.0
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=715724971]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 28.800001
-anchor_bottom = 16.25
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_x41p7")
 
 [node name="CharacterBody2D" parent="." unique_id=203061404 instance=ExtResource("2_vpkua")]
@@ -31,6 +33,31 @@ scale = Vector2(-2.798701, -3.6502287)
 position = Vector2(1122, 311)
 scale = Vector2(-2.798701, -3.6502287)
 
-[node name="CharacterBody2D4" parent="." unique_id=262046440 instance=ExtResource("3_vpkua")]
+[node name="bird" parent="." unique_id=262046440 instance=ExtResource("3_vpkua")]
 position = Vector2(87, 328.00003)
 scale = Vector2(2.65082, 2.65082)
+
+[node name="Control2" type="Control" parent="." unique_id=1425473888]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1159.0
+offset_bottom = 649.0
+
+[node name="Panel" type="Panel" parent="Control2" unique_id=592772908]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_right = 117.5
+offset_bottom = 82.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Control2/Panel" unique_id=1589098716]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Score:"
