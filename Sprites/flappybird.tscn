@@ -19,5 +19,9 @@ anchor_bottom = 16.25
 texture = ExtResource("1_x41p7")
 
 [node name="CharacterBody2D" parent="." unique_id=203061404 instance=ExtResource("2_vpkua")]
-position = Vector2(380.00003, 311)
+position = Vector2(363, 335)
+scale = Vector2(-2.0459983, -2.9283516)
+
+[node name="CharacterBody2D2" parent="." unique_id=520300102 instance=ExtResource("2_vpkua")]
+position = Vector2(785, 328)
 scale = Vector2(-2.0459983, -2.9283516)

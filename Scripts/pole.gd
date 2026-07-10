@@ -16,3 +16,4 @@ func _physics_process(delta: float) -> void:
 		if global_position.x < -50:
 		# Teleport it back to the right side of the screen
 			global_position.x = screen_width + 50
+			global_position.y = randf_range(200.0, 500.0)
