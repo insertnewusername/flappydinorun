@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d118ptorxbnbm" path="res://Assets/flappybackground.jpg" id="1_x41p7"]
 [ext_resource type="PackedScene" uid="uid://dpvumjt8hun6c" path="res://Sprites/pole.tscn" id="2_vpkua"]
+[ext_resource type="PackedScene" uid="uid://b7fubmpbqiaod" path="res://Sprites/bird.tscn" id="3_vpkua"]
 
 [node name="Node2D" type="Node2D" unique_id=1830178595]
 
@@ -29,3 +30,7 @@ scale = Vector2(-2.798701, -3.6502287)
 [node name="CharacterBody2D3" parent="." unique_id=1320374657 instance=ExtResource("2_vpkua")]
 position = Vector2(1122, 311)
 scale = Vector2(-2.798701, -3.6502287)
+
+[node name="CharacterBody2D4" parent="." unique_id=262046440 instance=ExtResource("3_vpkua")]
+position = Vector2(87, 328.00003)
+scale = Vector2(2.65082, 2.65082)

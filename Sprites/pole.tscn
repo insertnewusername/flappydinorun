@@ -25,18 +25,18 @@ size = Vector2(31, 78)
 script = ExtResource("1_c2o5c")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=358896420]
-position = Vector2(3.0000038, 60)
+position = Vector2(0, 60)
 sprite_frames = SubResource("SpriteFrames_uvkjr")
 
 [node name="Sprite2D2" type="AnimatedSprite2D" parent="." unique_id=1270842211]
-position = Vector2(2.0000038, -55)
+position = Vector2(0, -75)
 rotation = -3.1415927
 sprite_frames = SubResource("SpriteFrames_uvkjr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624592207]
-position = Vector2(3.5, 60)
+position = Vector2(0, 60)
 shape = SubResource("RectangleShape2D_b50va")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1569151398]
-position = Vector2(2, -55)
+position = Vector2(0, -75)
 shape = SubResource("RectangleShape2D_b50va")
