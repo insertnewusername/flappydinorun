@@ -4,6 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://dpvumjt8hun6c" path="res://Sprites/pole.tscn" id="2_vpkua"]
 [ext_resource type="PackedScene" uid="uid://b7fubmpbqiaod" path="res://Sprites/bird.tscn" id="3_vpkua"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpkua"]
+bg_color = Color(0.3620621, 0.68384075, 0.42607707, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [node name="Node2D" type="Node2D" unique_id=1830178595]
 
 [node name="Control" type="Control" parent="." unique_id=489366546]
@@ -23,15 +30,15 @@ texture = ExtResource("1_x41p7")
 
 [node name="CharacterBody2D" parent="." unique_id=203061404 instance=ExtResource("2_vpkua")]
 position = Vector2(336, 335)
-scale = Vector2(-2.798701, -3.6502287)
+scale = Vector2(-3.515834, -6.0102286)
 
 [node name="CharacterBody2D2" parent="." unique_id=520300102 instance=ExtResource("2_vpkua")]
 position = Vector2(727, 338)
-scale = Vector2(-2.798701, -3.6502287)
+scale = Vector2(-3.515834, -6.0102286)
 
 [node name="CharacterBody2D3" parent="." unique_id=1320374657 instance=ExtResource("2_vpkua")]
 position = Vector2(1122, 311)
-scale = Vector2(-2.798701, -3.6502287)
+scale = Vector2(-3.515834, -6.0102286)
 
 [node name="bird" parent="." unique_id=262046440 instance=ExtResource("3_vpkua")]
 position = Vector2(87, 328.00003)
@@ -52,12 +59,20 @@ offset_left = -117.5
 offset_right = 117.5
 offset_bottom = 82.0
 grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vpkua")
 
 [node name="Label" type="Label" parent="Control2/Panel" unique_id=1589098716]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.5
+offset_top = -37.0
+offset_right = 79.5
+offset_bottom = 37.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 54
 text = "Score:"

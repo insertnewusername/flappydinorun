@@ -37,5 +37,4 @@ func restart():
 	
 func score():
 	scores+= 1
-	print(scores)
 	score_label.text = "Score: %s" % scores
