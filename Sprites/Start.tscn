@@ -1,3 +1,53 @@
 [gd_scene format=3 uid="uid://dqtaoxgy2ntaf"]
 
+[ext_resource type="Texture2D" uid="uid://dw24n5eus6ao5" path="res://Assets/flappy start.png" id="1_ns740"]
+[ext_resource type="Script" uid="uid://daocqy7ob7yeu" path="res://Scripts/flappy_birdbutton.gd" id="2_s0x3u"]
+
+[sub_resource type="Shortcut" id="Shortcut_6u6kb"]
+
 [node name="Node2D" type="Node2D" unique_id=1043679149]
+
+[node name="Control" type="Control" parent="." unique_id=742799958]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 88.0
+offset_top = 32.0
+offset_right = 128.0
+offset_bottom = 72.0
+
+[node name="Flappy bird" type="TextureButton" parent="Control" unique_id=392468160]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.167
+anchor_top = -0.79
+anchor_right = 28.806002
+anchor_bottom = 16.271
+offset_left = -0.3199997
+offset_top = 1.6000004
+offset_right = -897.2401
+offset_bottom = -30.839966
+grow_vertical = 2
+shortcut = SubResource("Shortcut_6u6kb")
+texture_normal = ExtResource("1_ns740")
+texture_pressed = ExtResource("1_ns740")
+texture_hover = ExtResource("1_ns740")
+texture_disabled = ExtResource("1_ns740")
+texture_focused = ExtResource("1_ns740")
+script = ExtResource("2_s0x3u")
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1453558416]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 156.0
+offset_right = 349.0
+offset_bottom = 652.0
+
+[node name="Dino game" type="TextureRect" parent="Control" unique_id=2031194470]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 3.7200003
+anchor_bottom = 3.2600002
+offset_left = 857.0
+offset_top = 181.0
+offset_right = 748.19995
+offset_bottom = 90.59999
