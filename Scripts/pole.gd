@@ -3,7 +3,6 @@ extends CharacterBody2D
 
 const SPEED = -200.0
 var screen_width: float
-
 func _ready() -> void:
 	screen_width = get_viewport_rect().size.x
 
@@ -25,5 +24,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.die()
 
 
-func _on_area_2d_2_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	pass # Replace with function body.
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	if body.name == "bird":
+		body.score()
+	
