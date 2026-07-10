@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://c38fit7gri3u2"]
 
 [ext_resource type="Texture2D" uid="uid://d118ptorxbnbm" path="res://Assets/flappybackground.jpg" id="1_x41p7"]
+[ext_resource type="Texture2D" uid="uid://3rgqhnjd485q" path="res://Assets/dinosaur-game-logo.png" id="2_oqvsm"]
 [ext_resource type="PackedScene" uid="uid://dpvumjt8hun6c" path="res://Sprites/pole.tscn" id="2_vpkua"]
+[ext_resource type="Script" uid="uid://cm3ymx0be2do4" path="res://Scripts/homebutton.gd" id="3_is5kj"]
 [ext_resource type="PackedScene" uid="uid://b7fubmpbqiaod" path="res://Sprites/bird.tscn" id="3_vpkua"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpkua"]
@@ -76,3 +78,16 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 54
 text = "Score:"
+
+[node name="Panel2" type="TextureButton" parent="Control2" unique_id=856283238]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0060396893
+anchor_top = 0.013867488
+anchor_right = 0.14581536
+anchor_bottom = 0.15562403
+texture_normal = ExtResource("2_oqvsm")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_is5kj")
+metadata/_edit_use_anchors_ = true

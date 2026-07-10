@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cww1jxmku7p70"]
+
+[ext_resource type="Texture2D" uid="uid://3rgqhnjd485q" path="res://Assets/dinosaur-game-logo.png" id="1_xcrwt"]
+[ext_resource type="Script" uid="uid://cm3ymx0be2do4" path="res://Scripts/homebutton.gd" id="2_7kk00"]
+
+[node name="Home" type="Control" unique_id=696977469]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="TextureButton" parent="." unique_id=135088928]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.838001
+anchor_bottom = 16.157001
+offset_left = 7.0
+offset_top = 9.0
+offset_right = -1014.52
+offset_bottom = -553.28
+texture_normal = ExtResource("1_xcrwt")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_7kk00")
