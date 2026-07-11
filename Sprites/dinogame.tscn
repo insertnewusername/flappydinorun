@@ -50,5 +50,13 @@ position = Vector2(102.00003, 403.00003)
 scale = Vector2(0.102063425, 0.102063425)
 
 [node name="area" parent="." unique_id=1175471818 instance=ExtResource("5_luw6f")]
-position = Vector2(798.00006, 464)
+position = Vector2(380, 469.00003)
+scale = Vector2(0.20947379, 0.20947379)
+
+[node name="area2" parent="." unique_id=1647411721 instance=ExtResource("5_luw6f")]
+position = Vector2(688.00006, 468)
+scale = Vector2(0.20947379, 0.20947379)
+
+[node name="area3" parent="." unique_id=2076139362 instance=ExtResource("5_luw6f")]
+position = Vector2(1026, 465.00003)
 scale = Vector2(0.20947379, 0.20947379)
