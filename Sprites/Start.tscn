@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dqtaoxgy2ntaf"]
 
-[ext_resource type="Texture2D" uid="uid://c3fxkayknquw3" path="res://Assets/geodashbg.jpg" id="1_fk8mm"]
 [ext_resource type="Script" uid="uid://cs76shmx1j1ut" path="res://Scripts/start.gd" id="1_h6838"]
 [ext_resource type="Texture2D" uid="uid://dw24n5eus6ao5" path="res://Assets/flappy start.png" id="1_ns740"]
 [ext_resource type="Script" uid="uid://daocqy7ob7yeu" path="res://Scripts/flappy_birdbutton.gd" id="2_s0x3u"]
@@ -16,32 +15,18 @@ script = ExtResource("1_h6838")
 [node name="Control" type="Control" parent="." unique_id=742799958]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 88.0
-offset_top = 32.0
-offset_right = 128.0
-offset_bottom = 72.0
-
-[node name="TextureRect" type="TextureButton" parent="Control" unique_id=1092804021]
-layout_mode = 0
-offset_left = 168.0
-offset_top = -30.0
-offset_right = 882.18005
-offset_bottom = 405.0564
-scale = Vector2(1.0683581, 1.4894621)
-texture_normal = ExtResource("1_fk8mm")
-texture_pressed = ExtResource("1_fk8mm")
-texture_hover = ExtResource("1_fk8mm")
-texture_disabled = ExtResource("1_fk8mm")
-texture_focused = ExtResource("1_fk8mm")
-stretch_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 1155.0
+offset_bottom = 647.0
 
 [node name="Flappy bird" type="TextureButton" parent="Control" unique_id=392468160]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -2.175
-anchor_top = -0.75
-anchor_right = 7.35
-anchor_bottom = 15.425
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -575.0
+grow_horizontal = 2
 grow_vertical = 2
 shortcut = SubResource("Shortcut_6u6kb")
 texture_normal = ExtResource("1_ns740")
@@ -52,19 +37,15 @@ texture_focused = ExtResource("1_ns740")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s0x3u")
-metadata/_edit_use_anchors_ = true
 
 [node name="Dino game" type="TextureButton" parent="Control" unique_id=1408261616]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -1.8160001
-anchor_top = -0.726
-anchor_right = 26.625002
-anchor_bottom = 15.300001
-offset_left = 755.64
-offset_top = 0.040000916
-offset_right = -6.000122
-offset_bottom = 7.999939
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 581.0
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource("3_6u6kb")
 ignore_texture_size = true
 stretch_mode = 0
@@ -75,10 +56,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 28.0
-offset_top = 13.0
-offset_right = -17.0
-offset_bottom = -548.0
+offset_left = 119.0
+offset_top = 11.0
+offset_right = -96.0
+offset_bottom = -547.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)

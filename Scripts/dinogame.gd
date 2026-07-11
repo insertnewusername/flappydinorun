@@ -18,6 +18,7 @@ func _on_fade_timer_timeout() -> void:
 	
 func backhome() -> void:
 	backhomes += 1
+	$dino.immunity()
 	print(backhomes)
 	$Fade_transition/Fade_timer.start()
 	$Fade_transition.show()

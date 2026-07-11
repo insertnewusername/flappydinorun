@@ -1,9 +1,10 @@
 extends CharacterBody2D
 @onready var label: Label = $"../Control2/Panel/Label"
-
+var immune = 0
 
 const JUMP_VELOCITY = -450.0
 var score = 0
+var hiscore = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -21,11 +22,17 @@ func _physics_process(delta: float) -> void:
 
 func addscore():
 	score += 1
-	label.text = "Score: %s" % score
+	label.text = "Hi: %d   Score: %d" % [hiscore, score]
+	if score > hiscore:
+		hiscore = score
+		
 
 func die():
-	call_deferred("reload") 
+	if immune == 0:
+		call_deferred("reload") 
 	
 func reload():
 	get_tree().reload_current_scene()
 	
+func immunity():
+	immune += 1

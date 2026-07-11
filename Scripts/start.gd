@@ -25,6 +25,7 @@ func flappybird():
 
 
 func _on_fade_timer_timeout() -> void:
+	$Fade_transition.hide()
 	if gameno == 0:
 		$Fade_transition.hide()
 	elif gameno == 1:
