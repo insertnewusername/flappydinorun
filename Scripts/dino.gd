@@ -4,8 +4,8 @@ var immune = 0
 
 const JUMP_VELOCITY = -450.0
 var score = 0
-var hiscore = 0
-
+func _ready() -> void:
+	label.text = "Hi: %d   Score: %d" % [Global.hiscore, score]
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -22,10 +22,10 @@ func _physics_process(delta: float) -> void:
 
 func addscore():
 	score += 1
-	label.text = "Hi: %d   Score: %d" % [hiscore, score]
-	if score > hiscore:
-		hiscore = score
+	if score > Global.hiscore:
+		Global.hiscore = score
 		
+	label.text = "Hi: %d   Score: %d" % [Global.hiscore, score]
 
 func die():
 	if immune == 0:
