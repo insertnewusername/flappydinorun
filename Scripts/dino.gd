@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var label: Label = $"../Control2/Panel/Label"
 
 
 const JUMP_VELOCITY = -400.0
@@ -20,7 +21,8 @@ func _physics_process(delta: float) -> void:
 
 func addscore():
 	score += 1
-	print(score)
+	label.text = "Score: %s" % score
 
 func die():
 	get_tree().reload_current_scene()
+	
