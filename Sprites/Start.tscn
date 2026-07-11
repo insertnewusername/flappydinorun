@@ -9,6 +9,13 @@
 
 [sub_resource type="Shortcut" id="Shortcut_6u6kb"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sblvp"]
+bg_color = Color(0.5218895, 0.60943943, 0.7151351, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [node name="Node2D" type="Node2D" unique_id=1043679149]
 script = ExtResource("1_h6838")
 
@@ -22,10 +29,10 @@ offset_bottom = 647.0
 
 [node name="Flappy bird" type="TextureButton" parent="Control" unique_id=392468160]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 0.5025951
 anchor_bottom = 1.0
-offset_right = -575.0
+offset_right = 6.1035156e-05
 grow_horizontal = 2
 grow_vertical = 2
 shortcut = SubResource("Shortcut_6u6kb")
@@ -37,34 +44,61 @@ texture_focused = ExtResource("1_ns740")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s0x3u")
+metadata/_edit_use_anchors_ = true
 
 [node name="Dino game" type="TextureButton" parent="Control" unique_id=1408261616]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_left = 0.5025951
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 581.0
+offset_left = 6.1035156e-05
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("3_6u6kb")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_s0x3u")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Control/Dino game" unique_id=1114959433]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 119.0
-offset_top = 11.0
-offset_right = -96.0
-offset_bottom = -547.0
+anchors_preset = -1
+anchor_left = 0.20695652
+anchor_top = 0.017027864
+anchor_right = 0.83304346
+anchor_bottom = 0.15325077
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "Dino game"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Control" unique_id=975941269]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32439446
+anchor_top = 0.7987616
+anchor_right = 0.71712804
+anchor_bottom = 0.9256966
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sblvp")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control/Panel" unique_id=411986205]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04845815
+anchor_top = 0.22560975
+anchor_right = 0.95154184
+anchor_bottom = 0.7743902
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Hover + Spacebar to select"
+metadata/_edit_use_anchors_ = true
 
 [node name="Fade_transition" parent="." unique_id=1772130151 instance=ExtResource("7_cincb")]
 visible = false
