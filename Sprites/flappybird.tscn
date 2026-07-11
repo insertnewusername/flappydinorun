@@ -15,6 +15,9 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyb6b"]
+bg_color = Color(0.94509804, 0.9490196, 0.9490196, 1)
+
 [node name="Node2D" type="Node2D" unique_id=1830178595]
 script = ExtResource("1_nyb6b")
 
@@ -50,11 +53,14 @@ position = Vector2(87, 328.00003)
 scale = Vector2(2.65082, 2.65082)
 
 [node name="Fade_transition" parent="." unique_id=1772130151 instance=ExtResource("6_is5kj")]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_left = -191.0
+offset_top = -201.0
+offset_right = 1739.0
+offset_bottom = 981.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -108,6 +114,20 @@ texture_normal = ExtResource("6_nyb6b")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("3_is5kj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control2/Panel3" unique_id=1832090564]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.018573401
+anchor_top = 0.7497751
+anchor_right = 0.9814825
+anchor_bottom = 0.96292967
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_nyb6b")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nyb6b")
+text = "(Hover + space)"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

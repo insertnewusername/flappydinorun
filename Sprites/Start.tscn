@@ -38,14 +38,10 @@ stretch_mode = 0
 [node name="Flappy bird" type="TextureButton" parent="Control" unique_id=392468160]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -2.167
-anchor_top = -0.79
-anchor_right = 28.806002
-anchor_bottom = 16.271
-offset_left = -0.3199997
-offset_top = 1.6000004
-offset_right = -858.2401
-offset_bottom = -33.839966
+anchor_left = -2.175
+anchor_top = -0.75
+anchor_right = 7.35
+anchor_bottom = 15.425
 grow_vertical = 2
 shortcut = SubResource("Shortcut_6u6kb")
 texture_normal = ExtResource("1_ns740")
@@ -56,6 +52,7 @@ texture_focused = ExtResource("1_ns740")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_s0x3u")
+metadata/_edit_use_anchors_ = true
 
 [node name="Dino game" type="TextureButton" parent="Control" unique_id=1408261616]
 layout_mode = 1
@@ -90,5 +87,11 @@ text = "Dino game"
 
 [node name="Fade_transition" parent="." unique_id=1772130151 instance=ExtResource("7_cincb")]
 visible = false
+offset_left = -2314.0
+offset_top = -1684.0
+offset_right = 3425.0
+offset_bottom = 2944.0
 
 [node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=269974262]
+
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

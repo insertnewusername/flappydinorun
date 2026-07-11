@@ -1,4 +1,5 @@
 extends TextureButton
+@onready var fade_transition: ColorRect = $"../../Fade_transition"
 
 
 # Called when the node enters the scene tree for the first time.

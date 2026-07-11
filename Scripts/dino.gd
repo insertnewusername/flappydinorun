@@ -24,5 +24,8 @@ func addscore():
 	label.text = "Score: %s" % score
 
 func die():
+	call_deferred("reload") 
+	
+func reload():
 	get_tree().reload_current_scene()
 	
