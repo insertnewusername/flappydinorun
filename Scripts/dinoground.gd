@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-const SPEED = -200
+const SPEED = -400
 var screen_width: float
 func _ready() -> void:
 	screen_width = get_viewport_rect().size.x

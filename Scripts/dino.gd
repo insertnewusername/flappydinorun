@@ -21,3 +21,6 @@ func _physics_process(delta: float) -> void:
 func addscore():
 	score += 1
 	print(score)
+
+func die():
+	get_tree().reload_current_scene()

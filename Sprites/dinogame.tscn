@@ -43,16 +43,16 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(582, 478)
 
 [node name="Dinoground2" parent="." unique_id=2051198940 instance=ExtResource("1_m3ra7")]
-position = Vector2(1769, 478)
+position = Vector2(1771, 478)
 
 [node name="dino" parent="." unique_id=1283356452 instance=ExtResource("2_h7c0q")]
 position = Vector2(102.00003, 403.00003)
 scale = Vector2(0.102063425, 0.102063425)
 
 [node name="area" parent="." unique_id=1175471818 instance=ExtResource("5_luw6f")]
-position = Vector2(424, 466.00003)
+position = Vector2(464, 466.00003)
 scale = Vector2(0.20947379, 0.20947379)
 
 [node name="area2" parent="." unique_id=1647411721 instance=ExtResource("5_luw6f")]
-position = Vector2(931, 466)
+position = Vector2(1015, 466)
 scale = Vector2(0.20947379, 0.20947379)

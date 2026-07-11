@@ -88,3 +88,8 @@ func startup() -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "dino":
 		body.addscore()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.name =="dino":
+		body.die()
