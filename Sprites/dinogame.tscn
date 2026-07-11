@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://6av6bxsc7uha"]
 
-[ext_resource type="Texture2D" uid="uid://3rgqhnjd485q" path="res://Assets/dinosaur-game-logo.png" id="1_cnsjx"]
 [ext_resource type="PackedScene" uid="uid://dovq2vaemgma2" path="res://Sprites/dinoground.tscn" id="1_m3ra7"]
 [ext_resource type="PackedScene" uid="uid://2iq5e6yv25iu" path="res://Sprites/dino.tscn" id="2_h7c0q"]
 [ext_resource type="Script" uid="uid://cm3ymx0be2do4" path="res://Scripts/homebutton.gd" id="2_luw6f"]
+[ext_resource type="Texture2D" uid="uid://b7t8slt0fii8k" path="res://Assets/Homebutton.png" id="4_luw6f"]
 [ext_resource type="PackedScene" uid="uid://csmobfowlr7nb" path="res://Sprites/dinotree.tscn" id="5_luw6f"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_h7c0q"]
@@ -15,6 +15,9 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnjje"]
+bg_color = Color(0.94509804, 0.9490196, 0.9490196, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1035819343]
 
@@ -89,15 +92,29 @@ text = "Score:"
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0060396893
-anchor_top = 0.013867489
-anchor_right = 0.23402418
-anchor_bottom = 0.24695122
+anchor_top = 0.013867488
+anchor_right = 0.09922868
+anchor_bottom = 0.18012777
 offset_left = -0.0060396194
 offset_top = 0.0970726
 offset_right = -0.0060424805
 offset_bottom = 0.097076416
-texture_normal = ExtResource("1_cnsjx")
+texture_normal = ExtResource("4_luw6f")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 4
 script = ExtResource("2_luw6f")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control2/Panel2" unique_id=1774571544]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.018573401
+anchor_top = 0.7497751
+anchor_right = 0.9814825
+anchor_bottom = 0.96292967
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_lnjje")
+theme_override_styles/focus = SubResource("StyleBoxFlat_lnjje")
+text = "(Hover + space)"
 metadata/_edit_use_anchors_ = true
