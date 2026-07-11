@@ -63,8 +63,8 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -117.5
-offset_right = 117.5
+offset_left = -250.0
+offset_right = 250.0
 offset_bottom = 82.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vpkua")
@@ -83,7 +83,7 @@ offset_bottom = 37.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 54
-text = "Score:"
+text = "Hi: %s   Score: %s"
 
 [node name="Panel3" type="TextureButton" parent="Control2" unique_id=106636326]
 layout_mode = 1

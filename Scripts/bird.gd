@@ -9,7 +9,7 @@ var scores = 0
 var immunes = 0
 func _ready() -> void:
 	screen_height = get_viewport_rect().size.y
-
+	score_label.text = "Hi: %s   Score: %s" % [Global.flappyhi, scores]
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -39,7 +39,10 @@ func restart():
 	
 func score():
 	scores+= 1
-	score_label.text = "Score: %s" % scores
+	if scores > Global.flappyhi:
+		Global.flappyhi = scores
+		
+	score_label.text = "Hi: %s   Score: %s" % [Global.flappyhi, scores]
 	
 func immune():
 	immunes += 1
