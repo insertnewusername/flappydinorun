@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dovq2vaemgma2" path="res://Sprites/dinoground.tscn" id="1_m3ra7"]
 [ext_resource type="PackedScene" uid="uid://2iq5e6yv25iu" path="res://Sprites/dino.tscn" id="2_h7c0q"]
 [ext_resource type="Script" uid="uid://cm3ymx0be2do4" path="res://Scripts/homebutton.gd" id="2_luw6f"]
+[ext_resource type="PackedScene" uid="uid://csmobfowlr7nb" path="res://Sprites/dinotree.tscn" id="5_luw6f"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_h7c0q"]
 specular_color = Color(0.07762881, 0.07762883, 0.07762877, 1)
@@ -45,5 +46,9 @@ position = Vector2(582, 478)
 position = Vector2(1769, 478)
 
 [node name="dino" parent="." unique_id=1283356452 instance=ExtResource("2_h7c0q")]
-position = Vector2(222.00006, 360)
+position = Vector2(102.00003, 403.00003)
 scale = Vector2(0.102063425, 0.102063425)
+
+[node name="area" parent="." unique_id=1175471818 instance=ExtResource("5_luw6f")]
+position = Vector2(798.00006, 464)
+scale = Vector2(0.20947379, 0.20947379)

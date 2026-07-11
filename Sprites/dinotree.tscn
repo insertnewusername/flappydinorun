@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://csmobfowlr7nb"]
 
+[ext_resource type="Script" uid="uid://n2joqflp4xeb" path="res://Scripts/dinotree.gd" id="1_egi2b"]
 [ext_resource type="Texture2D" uid="uid://bjwukg1ot2jhj" path="res://Assets/bigtree.png" id="1_plhj4"]
 [ext_resource type="Texture2D" uid="uid://dedr2g65uk8qe" path="res://Assets/smalltree.png" id="2_egi2b"]
 
@@ -71,7 +72,8 @@ size = Vector2(207, 221)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrgyr"]
 size = Vector2(312, 221)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=784459864]
+[node name="area" type="Area2D" unique_id=1175471818]
+script = ExtResource("1_egi2b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1782023094]
 position = Vector2(14, 69)
