@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://csmobfowlr7nb"]
+
+[ext_resource type="Texture2D" uid="uid://bjwukg1ot2jhj" path="res://Assets/bigtree.png" id="1_plhj4"]
+[ext_resource type="Texture2D" uid="uid://dedr2g65uk8qe" path="res://Assets/smalltree.png" id="2_egi2b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afnke"]
+atlas = ExtResource("1_plhj4")
+region = Rect2(0, 0, 600, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxdkd"]
+atlas = ExtResource("1_plhj4")
+region = Rect2(600, 0, 600, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8sng"]
+atlas = ExtResource("1_plhj4")
+region = Rect2(1200, 0, 600, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2l4a"]
+atlas = ExtResource("2_egi2b")
+region = Rect2(0, 0, 666, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tycml"]
+atlas = ExtResource("2_egi2b")
+region = Rect2(666, 0, 666, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dure"]
+atlas = ExtResource("2_egi2b")
+region = Rect2(1332, 0, 666, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tycml"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afnke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxdkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8sng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2l4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tycml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dure")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dncu1"]
+size = Vector2(163, 307.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcbbn"]
+size = Vector2(315.5, 312.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4770"]
+size = Vector2(485.75, 312.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oy2kw"]
+size = Vector2(106, 221)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmec6"]
+size = Vector2(207, 221)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrgyr"]
+size = Vector2(312, 221)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=784459864]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1782023094]
+position = Vector2(14, 69)
+sprite_frames = SubResource("SpriteFrames_tycml")
+
+[node name="Big1" type="CollisionShape2D" parent="." unique_id=556648942]
+position = Vector2(100, -117.25)
+shape = SubResource("RectangleShape2D_dncu1")
+
+[node name="Big2" type="CollisionShape2D" parent="." unique_id=1251207836]
+position = Vector2(68.25, -113.625)
+shape = SubResource("RectangleShape2D_hcbbn")
+
+[node name="Big3" type="CollisionShape2D" parent="." unique_id=518913381]
+position = Vector2(29.125, -111)
+shape = SubResource("RectangleShape2D_b4770")
+
+[node name="Small1" type="CollisionShape2D" parent="." unique_id=1031918673]
+position = Vector2(119, -74.5)
+shape = SubResource("RectangleShape2D_oy2kw")
+
+[node name="Small2" type="CollisionShape2D" parent="." unique_id=2033338813]
+position = Vector2(-21.5, -74.5)
+shape = SubResource("RectangleShape2D_nmec6")
+
+[node name="Small3" type="CollisionShape2D" parent="." unique_id=1620618621]
+position = Vector2(-141, -74.5)
+shape = SubResource("RectangleShape2D_nrgyr")
