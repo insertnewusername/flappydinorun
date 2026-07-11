@@ -6,7 +6,7 @@ extends CharacterBody2D
 const JUMP_VELOCITY = -400.0
 var screen_height: float
 var scores = 0
-
+var immunes = 0
 func _ready() -> void:
 	screen_height = get_viewport_rect().size.y
 
@@ -29,12 +29,17 @@ func _physics_process(delta: float) -> void:
 		die()
 	
 func die():
-	print("ded") 
-	call_deferred("restart")	
-	
+	if immunes == 0:
+		print("ded") 
+		call_deferred("restart")	
+	else:
+		pass
 func restart():
 	get_tree().reload_current_scene()
 	
 func score():
 	scores+= 1
 	score_label.text = "Score: %s" % scores
+	
+func immune():
+	immunes += 1

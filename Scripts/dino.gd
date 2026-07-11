@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var label: Label = $"../Control2/Panel/Label"
 
 
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -450.0
 var score = 0
 
 func _physics_process(delta: float) -> void:

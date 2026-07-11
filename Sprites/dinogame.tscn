@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://6av6bxsc7uha"]
 
+[ext_resource type="Script" uid="uid://qmowg2gfaie6" path="res://Scripts/dinogame.gd" id="1_5e1bn"]
 [ext_resource type="PackedScene" uid="uid://dovq2vaemgma2" path="res://Sprites/dinoground.tscn" id="1_m3ra7"]
 [ext_resource type="PackedScene" uid="uid://2iq5e6yv25iu" path="res://Sprites/dino.tscn" id="2_h7c0q"]
 [ext_resource type="Script" uid="uid://cm3ymx0be2do4" path="res://Scripts/homebutton.gd" id="2_luw6f"]
 [ext_resource type="Texture2D" uid="uid://b7t8slt0fii8k" path="res://Assets/Homebutton.png" id="4_luw6f"]
 [ext_resource type="PackedScene" uid="uid://csmobfowlr7nb" path="res://Sprites/dinotree.tscn" id="5_luw6f"]
+[ext_resource type="PackedScene" uid="uid://dmjaxooee8yvu" path="res://Sprites/fadetransition.tscn" id="7_cpflb"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_h7c0q"]
 specular_color = Color(0.07762881, 0.07762883, 0.07762877, 1)
@@ -20,6 +22,7 @@ corner_radius_bottom_left = 16
 bg_color = Color(0.94509804, 0.9490196, 0.9490196, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1035819343]
+script = ExtResource("1_5e1bn")
 
 [node name="Control" type="Control" parent="." unique_id=1817884945]
 layout_mode = 3
@@ -118,3 +121,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_lnjje")
 theme_override_styles/focus = SubResource("StyleBoxFlat_lnjje")
 text = "(Hover + space)"
 metadata/_edit_use_anchors_ = true
+
+[node name="Fade_transition" parent="." unique_id=1772130151 instance=ExtResource("7_cpflb")]
+visible = false
+offset_left = -338.0
+offset_top = -258.0
+offset_right = 1697.0
+offset_bottom = 1250.0
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1034062369]
+
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

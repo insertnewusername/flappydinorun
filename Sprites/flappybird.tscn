@@ -52,20 +52,6 @@ scale = Vector2(-3.515834, -6.0102286)
 position = Vector2(87, 328.00003)
 scale = Vector2(2.65082, 2.65082)
 
-[node name="Fade_transition" parent="." unique_id=1772130151 instance=ExtResource("6_is5kj")]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -191.0
-offset_top = -201.0
-offset_right = 1739.0
-offset_bottom = 981.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=130211460]
-
 [node name="Control2" type="Control" parent="." unique_id=1425473888]
 layout_mode = 3
 anchors_preset = 0
@@ -129,5 +115,19 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_nyb6b")
 theme_override_styles/focus = SubResource("StyleBoxFlat_nyb6b")
 text = "(Hover + space)"
 metadata/_edit_use_anchors_ = true
+
+[node name="Fade_transition" parent="." unique_id=1772130151 instance=ExtResource("6_is5kj")]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -191.0
+offset_top = -201.0
+offset_right = 1739.0
+offset_bottom = 981.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=130211460]
 
 [connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
