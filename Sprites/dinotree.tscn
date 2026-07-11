@@ -72,6 +72,9 @@ size = Vector2(207, 221)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrgyr"]
 size = Vector2(312, 221)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egi2b"]
+size = Vector2(473, 395)
+
 [node name="area" type="Area2D" unique_id=1175471818]
 script = ExtResource("1_egi2b")
 
@@ -102,3 +105,11 @@ shape = SubResource("RectangleShape2D_nmec6")
 [node name="Small3" type="CollisionShape2D" parent="." unique_id=1620618621]
 position = Vector2(-141, -74.5)
 shape = SubResource("RectangleShape2D_nrgyr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=271984751]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1023267354]
+position = Vector2(-51.5, -383)
+shape = SubResource("RectangleShape2D_egi2b")
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

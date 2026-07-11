@@ -83,3 +83,8 @@ func startup() -> void:
 		
 	elif random_costume == 5:
 		small_3.set_deferred("disabled", false)
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.name == "dino":
+		body.addscore()

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const JUMP_VELOCITY = -400.0
-
+var score = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -17,3 +17,7 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 
 	move_and_slide()
+
+func addscore():
+	score += 1
+	print(score)
