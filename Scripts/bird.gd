@@ -1,6 +1,8 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var score_label: Label = $"../Control2/Panel/Label"
+@onready var point: AudioStreamPlayer2D = $"../point"
+@onready var woosh: AudioStreamPlayer2D = $"../woosh"
 
 
 const JUMP_VELOCITY = -400.0
@@ -18,6 +20,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
+		woosh.play()
 		animated_sprite_2d.play("flap")
 
 	# Get the input direction and handle the movement/deceleration.
@@ -39,6 +42,7 @@ func restart():
 	
 func score():
 	scores+= 1
+	point.play()
 	if scores > Global.flappyhi:
 		Global.flappyhi = scores
 		

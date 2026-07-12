@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b7fubmpbqiaod" path="res://Sprites/bird.tscn" id="3_vpkua"]
 [ext_resource type="PackedScene" uid="uid://dmjaxooee8yvu" path="res://Sprites/fadetransition.tscn" id="6_is5kj"]
 [ext_resource type="Texture2D" uid="uid://b7t8slt0fii8k" path="res://Assets/Homebutton.png" id="6_nyb6b"]
+[ext_resource type="AudioStream" uid="uid://ccffmquxf45qx" path="res://Assets/Sound Efects/point.wav" id="8_wrkoj"]
+[ext_resource type="AudioStream" uid="uid://bel5idotmo57d" path="res://Assets/Sound Efects/swoosh.wav" id="9_cxrvf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpkua"]
 bg_color = Color(0.3620621, 0.68384075, 0.42607707, 1)
@@ -129,5 +131,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=130211460]
+
+[node name="point" type="AudioStreamPlayer2D" parent="." unique_id=211319279]
+stream = ExtResource("8_wrkoj")
+
+[node name="woosh" type="AudioStreamPlayer2D" parent="." unique_id=1156362952]
+stream = ExtResource("9_cxrvf")
 
 [connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
