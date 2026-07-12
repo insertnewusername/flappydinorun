@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://rw6u8fbnynj1"]
+
+[ext_resource type="Script" uid="uid://cs76shmx1j1ut" path="res://Scripts/start.gd" id="1_otshs"]
+[ext_resource type="Texture2D" uid="uid://dw24n5eus6ao5" path="res://Assets/flappy start.png" id="2_cxbbg"]
+[ext_resource type="Script" uid="uid://daocqy7ob7yeu" path="res://Scripts/flappy_birdbutton.gd" id="3_o07a6"]
+[ext_resource type="PackedScene" uid="uid://dmjaxooee8yvu" path="res://Sprites/fadetransition.tscn" id="4_tcfru"]
+
+[sub_resource type="Shortcut" id="Shortcut_6u6kb"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_net5a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sblvp"]
+bg_color = Color(0.5218895, 0.60943943, 0.7151351, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Node2D" type="Node2D" unique_id=1043679149]
+script = ExtResource("1_otshs")
+
+[node name="Control" type="Control" parent="." unique_id=742799958]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 1155.0
+offset_bottom = 647.0
+
+[node name="Flappy bird" type="TextureButton" parent="Control" unique_id=392468160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+shortcut = SubResource("Shortcut_6u6kb")
+texture_normal = SubResource("CanvasTexture_net5a")
+texture_pressed = ExtResource("2_cxbbg")
+texture_hover = ExtResource("2_cxbbg")
+texture_disabled = ExtResource("2_cxbbg")
+texture_focused = ExtResource("2_cxbbg")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_o07a6")
+
+[node name="Panel" type="Panel" parent="Control" unique_id=975941269]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30622837
+anchor_top = 0.123839006
+anchor_right = 0.6989619
+anchor_bottom = 0.250774
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sblvp")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control/Panel" unique_id=411986205]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04845815
+anchor_top = 0.22560975
+anchor_right = 0.95154184
+anchor_bottom = 0.7743902
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Flappydino Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="Control" unique_id=1510938298]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2915225
+anchor_top = 0.49690402
+anchor_right = 0.6842561
+anchor_bottom = 0.623839
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sblvp")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control/Panel2" unique_id=612417605]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04845815
+anchor_top = 0.22560975
+anchor_right = 0.95154184
+anchor_bottom = 0.7743902
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Press space to continue"
+metadata/_edit_use_anchors_ = true
+
+[node name="Fade_transition" parent="." unique_id=1772130151 instance=ExtResource("4_tcfru")]
+visible = false
+offset_left = -2314.0
+offset_top = -1684.0
+offset_right = 3425.0
+offset_bottom = 2944.0
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=269974262]
+
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
