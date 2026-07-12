@@ -1,6 +1,11 @@
 extends CharacterBody2D
 @onready var label: Label = $"../Control2/Panel/Label"
+@onready var jump: AudioStreamPlayer2D = $"../Jump"
+@onready var point: AudioStreamPlayer2D = $"../Point"
+@onready var dies: AudioStreamPlayer2D = $"../Die"
+
 var immune = 0
+var stop = 0
 
 const JUMP_VELOCITY = -450.0
 var score = 0
@@ -14,6 +19,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -21,18 +27,24 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func addscore():
+	if stop == 1:
+		return
+	point.play()
 	score += 1
 	if score > Global.hiscore:
 		Global.hiscore = score
-		
 	label.text = "Hi: %d   Score: %d" % [Global.hiscore, score]
 
 func die():
+	stop = 1
 	if immune == 0:
-		call_deferred("reload") 
+		dies.play()
 	
 func reload():
 	get_tree().reload_current_scene()
 	
 func immunity():
 	immune += 1
+
+func _on_die_finished() -> void:
+	call_deferred("reload") 
