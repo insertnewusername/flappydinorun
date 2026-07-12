@@ -6,6 +6,11 @@ FlappyDino game is flappy bird, and chrome dino game. All in ONE! With only onek
 
 Demourl: 
 
+
+<h1>Features</h1>
+After trying the game, I realised that a 1-1 clone was kinda boring, so I did some experimenting with the scripts! <br>
+Now flappy bird goes down when you press space, and poles move from left to right! <br>
+Be able to triple jump with the chrome dino game. (4 trees are possible, js if u get it ur kinda done)<br>
 <h1>Controls</h1>
 Selecting a game: Hover + Spacebar
 Jump: Spacebar
