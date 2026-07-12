@@ -39,21 +39,19 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_x41p7")
 
-[node name="CharacterBody2D" parent="." unique_id=203061404 instance=ExtResource("2_vpkua")]
-position = Vector2(336, 335)
-scale = Vector2(-3.515834, -6.0102286)
-
 [node name="CharacterBody2D2" parent="." unique_id=520300102 instance=ExtResource("2_vpkua")]
-position = Vector2(727, 338)
+position = Vector2(451, 344)
+rotation = 3.1415927
 scale = Vector2(-3.515834, -6.0102286)
 
 [node name="CharacterBody2D3" parent="." unique_id=1320374657 instance=ExtResource("2_vpkua")]
-position = Vector2(1122, 311)
+position = Vector2(846, 317)
+rotation = 3.1415927
 scale = Vector2(-3.515834, -6.0102286)
 
-[node name="bird" parent="." unique_id=262046440 instance=ExtResource("3_vpkua")]
-position = Vector2(87, 328.00003)
-scale = Vector2(2.65082, 2.65082)
+[node name="CharacterBody2D" parent="." unique_id=203061404 instance=ExtResource("2_vpkua")]
+position = Vector2(60, 341)
+scale = Vector2(3.515834, 6.0102286)
 
 [node name="Control2" type="Control" parent="." unique_id=1425473888]
 layout_mode = 3
@@ -141,6 +139,11 @@ stream = ExtResource("9_cxrvf")
 
 [node name="Click" type="AudioStreamPlayer2D" parent="." unique_id=154161594]
 stream = ExtResource("10_cxrvf")
+
+[node name="bird" parent="." unique_id=262046440 instance=ExtResource("3_vpkua")]
+position = Vector2(1063.0001, 288)
+rotation = -3.1415925
+scale = Vector2(2.65082, 2.65082)
 
 [connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
 [connection signal="finished" from="Click" to="." method="_on_click_finished"]
