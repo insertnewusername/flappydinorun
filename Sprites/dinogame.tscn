@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://day4l1amyfpxy" path="res://Assets/jump.wav" id="8_fkppa"]
 [ext_resource type="AudioStream" uid="uid://501w0ttispkp" path="res://Assets/point.wav" id="9_oroyy"]
 [ext_resource type="AudioStream" uid="uid://crc3dyyfv6yay" path="res://Assets/die.wav" id="10_oroyy"]
+[ext_resource type="AudioStream" uid="uid://duajoq10edsr6" path="res://Assets/mouseclick.wav" id="11_j4ctb"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_h7c0q"]
 specular_color = Color(0.07762881, 0.07762883, 0.07762877, 1)
@@ -143,5 +144,9 @@ stream = ExtResource("9_oroyy")
 [node name="Die" type="AudioStreamPlayer2D" parent="." unique_id=512123659]
 stream = ExtResource("10_oroyy")
 
+[node name="Click" type="AudioStreamPlayer2D" parent="." unique_id=2141424017]
+stream = ExtResource("11_j4ctb")
+
 [connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
 [connection signal="finished" from="Die" to="dino" method="_on_die_finished"]
+[connection signal="finished" from="Click" to="." method="_on_click_finished"]

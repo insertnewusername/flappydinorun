@@ -1,6 +1,9 @@
 extends Node2D
 @onready var fade_transition: ColorRect = $Fade_transition
 var backhomes = 0
+@onready var click: AudioStreamPlayer2D = $Click
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,8 +23,11 @@ func backhome() -> void:
 	backhomes += 1
 	$dino.immunity()
 	print(backhomes)
+	click.play()
+	
+	
+func _on_click_finished() -> void:
 	$Fade_transition/Fade_timer.start()
 	$Fade_transition.show()
 	$Fade_transition/AnimationPlayer.play("fade_out")
-	
 	
