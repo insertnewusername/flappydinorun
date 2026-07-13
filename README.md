@@ -24,6 +24,11 @@ google chrome dino game. Originally, I was also planning to add geometry dash, b
 Making this project introduced several new components of Godot, such as more scripting features, such as going back to start, selecting a random costume, sound effects, etc.
 
 
+<h1>Screenshots</h1>
+<img width="1147" height="641" alt="Screenshot 2026-07-13 105105" src="https://github.com/user-attachments/assets/2bd22c6b-b3b8-4a7f-b1a1-f14f9f870c2d" />
+<img width="1117" height="612" alt="Screenshot 2026-07-13 105314" src="https://github.com/user-attachments/assets/37ad118b-35bc-4e9a-8182-472ec4b55b99" />
+<img width="1042" height="536" alt="Screenshot 2026-07-13 105330" src="https://github.com/user-attachments/assets/2391dceb-4fd9-4c33-9dc2-bd903840c286" />
+
 <h1>Credits</h1>
 Pixabay (n.d.) Clicks Sound Effects, Pixabay. Available at: https://pixabay.com/sound-effects/search/clicks/ (Accessed: 10 July 2026).
 The Sounds Resource (n.d.) Google Dinosaur Run Game - Asset 411530, The Sounds Resource. Available at: https://sounds.spriters-resource.com/browser_games/googledinosaurrungame/asset/411530/ (Accessed: 10 July 2026).
