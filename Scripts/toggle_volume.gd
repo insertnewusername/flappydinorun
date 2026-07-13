@@ -1,8 +1,6 @@
-extends Node
+extends TextureButton
 
-var hiscore: int = 0
-var flappyhi: int = 0
-var volume: int = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,3 +9,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+
+
+
+
+
+func _on_pressed() -> void:
+	Global.volume = 1 - Global.volume
+	print(Global.volume)

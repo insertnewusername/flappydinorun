@@ -5,11 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://dpvumjt8hun6c" path="res://Sprites/pole.tscn" id="2_vpkua"]
 [ext_resource type="Script" uid="uid://cm3ymx0be2do4" path="res://Scripts/homebutton.gd" id="3_is5kj"]
 [ext_resource type="PackedScene" uid="uid://b7fubmpbqiaod" path="res://Sprites/bird.tscn" id="3_vpkua"]
+[ext_resource type="PackedScene" uid="uid://cppj2epaaxdll" path="res://Sprites/toggle_volume.tscn" id="3_wifjw"]
 [ext_resource type="PackedScene" uid="uid://dmjaxooee8yvu" path="res://Sprites/fadetransition.tscn" id="6_is5kj"]
 [ext_resource type="Texture2D" uid="uid://b7t8slt0fii8k" path="res://Assets/Homebutton.png" id="6_nyb6b"]
 [ext_resource type="AudioStream" uid="uid://ccffmquxf45qx" path="res://Assets/Sound Efects/point.wav" id="8_wrkoj"]
 [ext_resource type="AudioStream" uid="uid://bel5idotmo57d" path="res://Assets/Sound Efects/swoosh.wav" id="9_cxrvf"]
 [ext_resource type="AudioStream" uid="uid://duajoq10edsr6" path="res://Assets/mouseclick.wav" id="10_cxrvf"]
+[ext_resource type="Texture2D" uid="uid://mcyfu3j7very" path="res://Assets/togglevol.png" id="12_q0iip"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpkua"]
 bg_color = Color(0.3620621, 0.68384075, 0.42607707, 1)
@@ -145,5 +147,18 @@ position = Vector2(1063.0001, 288)
 rotation = -3.1415925
 scale = Vector2(2.65082, 2.65082)
 
+[node name="toggle volume" parent="." unique_id=1880293570 instance=ExtResource("3_wifjw")]
+offset_left = 1067.0
+offset_top = 20.0
+offset_right = 1107.0
+offset_bottom = 60.0
+texture_normal = ExtResource("12_q0iip")
+texture_pressed = ExtResource("12_q0iip")
+texture_hover = ExtResource("12_q0iip")
+texture_disabled = ExtResource("12_q0iip")
+texture_focused = ExtResource("12_q0iip")
+metadata/_edit_use_anchors_ = true
+
 [connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
 [connection signal="finished" from="Click" to="." method="_on_click_finished"]
+[connection signal="pressed" from="toggle volume" to="toggle volume" method="_on_pressed"]

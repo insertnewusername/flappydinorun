@@ -20,8 +20,10 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
-		woosh.play()
 		animated_sprite_2d.play("flap")
+		if Global.volume == 1:
+			woosh.play()
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -42,7 +44,9 @@ func restart():
 	
 func score():
 	scores+= 1
-	point.play()
+	print(Global.volume)
+	if Global.volume == 1:
+		point.play()
 	if scores > Global.flappyhi:
 		Global.flappyhi = scores
 		

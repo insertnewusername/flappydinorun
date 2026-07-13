@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cppj2epaaxdll"]
+
+[ext_resource type="Texture2D" uid="uid://3rgqhnjd485q" path="res://Assets/dinosaur-game-logo.png" id="1_tadqp"]
+[ext_resource type="Script" uid="uid://cy3hqyfhg7yoa" path="res://Scripts/toggle_volume.gd" id="2_jdhhm"]
+
+[node name="toggle volume" type="TextureButton" unique_id=1880293570]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_tadqp")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_jdhhm")

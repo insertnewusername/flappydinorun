@@ -20,7 +20,8 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and onfloor < 2:
 		velocity.y = JUMP_VELOCITY
-		jump.play()
+		if Global.volume == 1:
+			jump.play()
 		onfloor += 1
 
 	# Get the input direction and handle the movement/deceleration.
@@ -32,7 +33,8 @@ func _physics_process(delta: float) -> void:
 func addscore():
 	if stop == 1:
 		return
-	point.play()
+		if Global.volume == 1:
+			point.play()
 	score += 1
 	if score > Global.hiscore:
 		Global.hiscore = score
@@ -41,7 +43,10 @@ func addscore():
 func die():
 	stop = 1
 	if immune == 0:
-		dies.play()
+		if Global.volume == 1:
+			dies.play()
+		else:
+			_on_die_finished()
 	
 func reload():
 	get_tree().reload_current_scene()

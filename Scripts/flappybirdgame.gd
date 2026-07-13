@@ -23,7 +23,10 @@ func backhome():
 	$bird.immune()
 	backhomes += 1
 	print(backhomes)
-	click.play()
+	if Global.volume == 1:
+		click.play()
+	else:
+		_on_click_finished()
 
 
 func _on_click_finished() -> void:
